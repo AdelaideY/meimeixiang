@@ -12,7 +12,6 @@ import 'vue-awesome/icons'
 // 引入fileter
 import './filter'
 import Icon from 'vue-awesome/components/Icon'
-
 // rem
 import computedRem from './rem'
 computedRem()

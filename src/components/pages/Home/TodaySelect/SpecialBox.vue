@@ -19,7 +19,7 @@ export default {
 <style lang="scss" scoped>
     .special-box{
         float: left;
-        width: 45%;
+        width: 44%;
         height: 2.8rem;
         padding: .1rem;
         margin: 0.1rem;
