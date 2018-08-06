@@ -39,13 +39,11 @@ export default {
         }
       }).then(res => {
         this.recommend = res.data.data
-        console.log(this.recommend[1].title)
       })
     }
   },
   created() {
    this.getrecommend()
-   console.log(this.$route)
   }
 }
 </script>
@@ -54,6 +52,11 @@ export default {
     padding-top: 0.5rem;
     display: flex; flex-direction: column;height: 100%;
     .recommend-ul{
+      width: 100%;
+      z-index: 90000;
+      position: fixed;
+      background-color: #fff;
+      top: 0.4rem;
       padding: 0 0.15rem;
       height: 0.47rem;
       overflow-x: auto;

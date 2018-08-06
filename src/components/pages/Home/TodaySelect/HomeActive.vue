@@ -1,9 +1,9 @@
 <template>
     <div class="home-active">
         <div class="home-active-img">
-            <router-link :to="{name:'mianmo'}">
+            <a >
                 <img :src="active[2].items[0].space_bg" alt="">
-            </router-link>
+            </a>
         </div>
         <div class="home-active-bottom">
             <div class="home-active-bl">
@@ -37,10 +37,11 @@
             getactive () {
                 this.$http.get('/meimei/h5/view/channel?id=1').then((res)=>{
                     this.active = res.data.data.components
+                    console.log(this.active[3])
                 })
             }
         },
-        created(){
+        mounted(){
             this.getactive()
         }
     }

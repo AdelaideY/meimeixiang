@@ -1,7 +1,7 @@
 <template>
   <div id = "app-home">
-    <!-- <home-search-bar></home-search-bar>
-    <home-stion></home-stion> -->
+    <home-search-bar></home-search-bar>
+    <home-stion></home-stion>
     <Bottom></Bottom>
   </div>
 </template>

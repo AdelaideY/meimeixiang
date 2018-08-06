@@ -4,7 +4,7 @@
 <script>
 import Bottom from '../../common/Bottom'
 export default {
-    name:'Classify',
+    name:'Car',
     components: {
         Bottom
     }

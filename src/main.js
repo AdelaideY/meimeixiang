@@ -5,12 +5,14 @@ import App from './App'
 import router from './router'
 // config
 import './module/config'
+import store from './store'
 // console.log(router)
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

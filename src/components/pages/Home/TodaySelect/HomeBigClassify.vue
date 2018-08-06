@@ -1,6 +1,6 @@
 <template>
 <div>
-    <home-classify v-for="(bigcl,i) in bigcls" :key="i" :big="bigcl"></home-classify>
+    <home-classify v-for="(bigcl,i) in bigcls" :key="i" :big="bigcl" :id="i"></home-classify>
 </div>
       
 </template>

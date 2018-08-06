@@ -28,6 +28,7 @@
   </script>
   <style lang="scss" scoped>
       #app-container{
+        padding-top: 0.4rem;
           flex:1;
           height: 30rem;
           overflow-x: hidden;

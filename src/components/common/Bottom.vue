@@ -1,6 +1,6 @@
 <template>
     <div class="bottom">
-        <router-link exact :to = "{name: navs.name}" active-class = "active"
+        <router-link  :to = "navs.path" active-class = "active"
             v-for="navs in navs"
             :key="navs.id"
         >
@@ -15,16 +15,16 @@ export default {
     data (){
         return {
             navs: [{
-                id:1,title:'首页',name:'home',icon:'home'
+                id:1,title:'首页',name:'home',icon:'home',path:'/home'
             },
             {
-                id:2,title:'分类',name:'classify',icon:'file-text'
+                id:2,title:'分类',name:'classify',icon:'tablet',path:'/classify'
             },
             {
-                id:3,title:'购物车',name:'car',icon:'cart-arrow-down'
+                id:3,title:'购物车',name:'car',icon:'cart-arrow-down',path:'/car'
             },
             {
-                id:4,title:'我的',name:'mine',icon:'user-o'
+                id:4,title:'我的',name:'mine',icon:'user',path:'/mine'
             }]
         }
     }
@@ -33,11 +33,16 @@ export default {
 <style lang="scss" scoped>
 
     .bottom{
-        display: flex;
-        justify-content: space-between;
+        z-index: 9000;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 0.5rem;
         a {
-            flex-grow: 1;
-            height: 100%;
+            background-color: #fff;
+            float: left;
+            width: 25%;
+            height: 0.5rem;
             display: flex;
             flex-flow: column;
             align-items: center;

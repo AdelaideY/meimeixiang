@@ -1,6 +1,9 @@
 <template>
     <div class="home-classify">
-        <router-link :to="{name:lipstick}">
+        <!-- { name: 'user', params: { userId: 123 }}
+        query: { plan: 'private' } -->
+        <router-link :to="{name:'list',query:{listid: id}}">
+            {{id}}
             <img :src="big.component_bg_url" alt="">
         </router-link>
         <div class="small-banner">
@@ -29,7 +32,7 @@ import Vue from 'vue'
 import Swiper from 'swiper'
     export default { 
         name: 'HomeClassify',
-        props:['big'],
+        props:['big','id'],
         mounted(){
             new Swiper(this.$refs.classify, {
                     slidesPerView: 'auto'
