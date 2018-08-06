@@ -9,12 +9,14 @@ import Home from '../components/pages/Home/Home'
 // 引入Classfiy
 import Classify from '../components/pages/classify/Classify'
 // 引入mine
-import Mine from '../components/pages/Mine/Mine'
+import Mine from '../components/pages/Mine/mine'
 
 // today 二级路由
-import Today from '../components/pages/Home/TodaySelect/TodaySelect.vue'
+import Today from '../components/pages/Home/TodaySelection/Today'
+import Pony from '../components/pages/Home/pony/pony'
 
-import Pony from '../components/pages/Home/pony/Pony'
+// 详情页
+import Detail from '../components/pages/details/details'
 
 // 全局注册
 Vue.use(VueRouter)
@@ -55,12 +57,17 @@ const routes = [
     path: '/mine',
     name: 'mine',
     component: Mine
+  },
+  {
+    path: '/detail/:id',
+    name: 'detail',
+    component: Detail
   }
 ]
+
 // 实例
 const router = new VueRouter({
   mode: 'history',
   routes
 })
 export default router
-

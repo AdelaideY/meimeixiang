@@ -1,0 +1,2 @@
+slides 是商品轮播图组件
+UITgoodlist 是 专题组件
