@@ -3,6 +3,9 @@
       <home-carousel></home-carousel>
       <home-section></home-section>
       <home-active></home-active>
+      <home-time>
+        
+      </home-time>
       <home-big-classify></home-big-classify>
       <home-special></home-special>
     </div>
@@ -10,6 +13,8 @@
   
   <script>
   // 引入轮播图
+  
+  import HomeTime from './HomeTime.vue'
   import HomeSection from '../HomeSection.vue'
   import HomeSpecial from './special.vue'
   import HomeCarousel from './HomeCarousel'
@@ -22,7 +27,8 @@
       HomeActive,
       HomeBigClassify,
       HomeSpecial,
-      HomeSection
+      HomeSection,
+      HomeTime
     }
   }
   </script>

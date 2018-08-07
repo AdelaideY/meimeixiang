@@ -1,7 +1,7 @@
 <template>
     <div class="home-special">
         <uiTitle title="为你推荐">
-            <specialBox
+            <specialBox 
                 v-for="(special,i) in specials"
                 :key="i"
                 :data="special"

@@ -1,19 +1,8 @@
 <template>
     <div class="app-login">
       <app-header :middle="middle" :right="right" :fangshi="fangshi"></app-header>
-        <div class="login-nav">
-            <p 
-            v-for="(logins,i) in logins" 
-            :key="i"
-            :class="{ 'active' : (index === i)}"
-            @click="index = i"
-            >
-            {{logins.contain}}
-            </p>
-        </div>
-        <tel v-if="index" :phone="phone" :yanzhen="yanzhen"></tel>
-        <password v-else ></password>
-
+        <password  :phone="phone" :yanzhen="yanzhen"></password>
+        
         <div class="but">
             <button @click="submit">即刻注册 坐享花样美妆</button>
         </div>
@@ -23,7 +12,6 @@
 <script>
 import axios from 'axios'
 import password from "./password"
-import tel from "./tel"
 import AppHeader from "../../common/APPHeader"
 export default {
   name: "AppRegister",
@@ -48,7 +36,7 @@ export default {
   methods: {
     submit() {
         axios({
-            url: '/meimei/h5/customer/quickLogin',
+            url: '/meimei/h5/customer/register',
             method: 'post',
             data: {
                 phone: this.phone.value*1,
@@ -77,8 +65,7 @@ export default {
   },
   components: {
     AppHeader,
-    password,
-    tel
+    password
   }
 };
 </script>

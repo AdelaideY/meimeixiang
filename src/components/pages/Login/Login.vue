@@ -59,6 +59,7 @@ export default {
               for (let it in data) {
                 ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&'
               }
+              ret = ret.slice(0,-1);
               return ret
             }],
             headers: {

@@ -1,14 +1,14 @@
 <template>
-    <div class="special-box">
+    <router-link tag="div" :to= "'/detail/'+data.productId" class="special-box">
         <div class="img-box">
-            <img width="100%" :src="data.imgUrl" alt="">
+            <img width="100%"  v-lazy="data.imgUrl">
         </div>
         <p class="name">{{data.brandName}}+{{data.name}}</p>
         <p class="price">
           <span class="sale">￥{{data.price}}</span>
           <span class="oriprice">￥{{data.originPrice}}</span>
         </p>
-    </div>
+    </router-link>
 </template>
 <script>
 export default {

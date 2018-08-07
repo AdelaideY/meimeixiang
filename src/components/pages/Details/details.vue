@@ -9,7 +9,12 @@
       </div>
       
     </div>
-
+    <div class="bottom">
+      <router-link to="/car" class="car">
+        <icon name="cart-arrow-down" class="sc"></icon>
+      </router-link>
+      <button>加入购物车</button>
+    </div>
     <div class="details-banner">
       <img width="100%" style="vertical-align: top;" :src="detailGood.img">
     </div>
@@ -55,6 +60,7 @@
         <p class="imgurl" v-html="detailGood.detail">
         </p>
     </div>
+
   </div>
 </template>
 <script>
@@ -153,6 +159,38 @@ export default {
       font-size: 12px;
       height: 0.3rem;
       color: #fff;
+    }
+  }
+  .bottom{
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0.5rem;
+      z-index: 50000;
+    .car{
+      background-color: #fff;
+      display: inline-block;
+      width: 20%;
+      height: 0.5rem;
+      line-height: 0.5rem;
+      text-align: center;
+      .sc{
+        width: 0.2rem;
+        height: 0.2rem;
+      }
+    }
+    button{
+      height: 0.5rem;
+      display: inline-block;
+      width: 75%;
+          background-color: #ff5073;
+    color: #fff;
+    border: 0;
+    font-size: 0.15rem;
+    border-radius: 0;
     }
   }
   .details-banner {

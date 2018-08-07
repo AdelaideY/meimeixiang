@@ -17,6 +17,7 @@ import AppLogin from '../components/pages/Login/Login.vue'
 import Pony from '../components/pages/Home/pony/Pony'
 import AppRegister from '../components/pages/Register/Register.vue'
 import AppList from '../components/pages/List/List.vue'
+import detail from '../components/pages/Details/details.vue'
 // 全局注册
 Vue.use(VueRouter)
 
@@ -84,6 +85,11 @@ const routes = [
     path: '/register',
     name: 'register',
     component: AppRegister
+  },
+  {
+    path: '/detail/:id',
+    name: 'detail',
+    component: detail
   }
 ]
 // 实例

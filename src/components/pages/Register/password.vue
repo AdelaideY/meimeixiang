@@ -1,31 +1,25 @@
 <template>
     <div class="pss">
-        <input type="text" v-model="phone" placeholder="账号/手机" @blur="yzuser">
-        <input type="password" v-model="mima" placeholder="密码" @blur="yzpass">
+        <input type="text" v-model="phone.value" placeholder="账号/手机">
+        <input type="password" v-model="yanzhen.value" placeholder="验证码">
+         <button @click="sendCode">发送验证码</button>
+        <input type="password" v-model="mima" placeholder="密码" >
     </div>
 </template>
 <script>
 export default {
   name: "password",
-  data() {
-    return {
-      phone: "",
-      mima: ""
-    };
-  },
-  computed: {
-    yzuser() {
-      if (!/^1[34578]\d{9}$/.test(this.phone)) {
-        alert("手机号码有误，请重填");
-        return false;
+  props:['phone','yanzhen'],
+  methods:{
+      sendCode(){
+          this.$http.get('/meimei/h5/sms/getAuth?userName='+this.phone.value+'&type=2')
+          .then(res => {
+            console.log(res)
+              if(res.status === 200){
+                  console.log('验证码发送成功')
+              }
+          })
       }
-    },
-    yzpass(){
-        if(!/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,10}$/.test(this.mima)){
-            alert('包含数字字母6到10位');
-            return false;
-        }
-    }
   }
 }
 </script>
@@ -40,4 +34,16 @@ export default {
             background: none;
             font-size: 0.16rem;
     }
+    button {
+  position: fixed;
+  right: 0.1rem;
+  top: 1.1rem;
+  color: #ff5073;
+  background: #fff;
+  border: 0.02rem solid #ff5073;
+  border-radius: 0.05rem;
+  width: 1.1rem;
+  height: 0.34rem;
+  line-height: 0.26rem;
+}
 </style>

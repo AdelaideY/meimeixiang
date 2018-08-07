@@ -7,11 +7,12 @@
 <script>
 // 引入它
 import column from './column'
-
+import Bottom from '../../common/Bottom'
 export default {
   name: 'Classify',
   components:{
-    column
+    column,
+    Bottom
   }
 }
 </script>
