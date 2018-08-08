@@ -1,5 +1,14 @@
 <template>
     <div class="app-list">
+        <div class="nav">
+      <div @click="$router.go(-1)">
+        <icon name="angle-left" class="goBack" ></icon>
+      </div>
+      <div @click="$router.push('/home')">
+        <icon name = "home" class="goHome"></icon>
+      </div>
+      
+    </div>
         <img :src="info.component_bg_url" alt="">
         <specialBox
                 v-for="(special,i) in specials"
@@ -38,3 +47,39 @@ export default {
     }
 }
 </script>
+<style lang="scss" scoped>
+    .nav {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    height: 0.44rem;
+    padding: 0 0.1rem;
+    line-height: 0.44rem;
+    .goBack {
+      position: absolute;
+      top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      display: inline-block;
+      width: 0.3rem;
+      height: 0.3rem;
+      left: 0;
+      background: #999;
+      color: #fff;
+    }
+    .goHome {
+      right: 10px;
+      position: absolute;
+      top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      display: inline-block;
+      width: 0.3rem;
+      background: #999;
+      font-size: 12px;
+      height: 0.3rem;
+      color: #fff;
+    }
+  }
+</style>

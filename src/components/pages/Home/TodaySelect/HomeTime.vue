@@ -34,7 +34,6 @@ export default {
     return {
       offset:'',
       Times:{scr:'', min:'',hours:'',day:''},
-      big: [],
       Notime:function(){}
     }
   },
@@ -71,7 +70,7 @@ export default {
     }
   },
   beforeCreate() {
-    this.end = '2018-8-8 00:35:00';  //设置过期时间
+    this.end = '2018-8-10 00:35:00';  //设置过期时间
   },
   created() {
     this.Notime = setInterval(this.showTime,1000);
